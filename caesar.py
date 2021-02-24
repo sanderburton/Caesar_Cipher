@@ -4,17 +4,16 @@ from cipher import cipher
 import os
 import sys
 
-validateInput(sys.argv)
+def main():
+    args = sys.argv[1:]
 
-# outPutFile = sys.stdout
-operation = sys.argv[1].lower()
-args = sys.argv[2:]
+    outPutFile = getOption("-s", args, str, default=sys.stdout)
+    rotation = getOption("-r", args, int, default=10)
 
-outPutFile = getOption("-s", args, str)
-rotation = getOption("-r", args, int)
+    validateInput(args)
 
-outPutStr = cipher(args, rotation)
+    outputStr = cipher(args, rotation)
+    print(outputStr.strip('\n'))
+    # After all options have been removed, check for fileName
 
-print(outPutStr.strip('\n'))
-# After all options have been removed, check for fileName
-
+main()
