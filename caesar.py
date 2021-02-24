@@ -13,10 +13,8 @@ args = sys.argv[2:]
 outPutFile = getOption("-s", args, str)
 rotation = getOption("-r", args, int)
 
-outPutStr = cipher(args, 1)
+outPutStr = cipher(args, rotation)
 
 print(outPutStr.strip('\n'))
 # After all options have been removed, check for fileName
 
-# print(type(rotation), type(outPutFile))
-# print(args)
