@@ -15,7 +15,7 @@ rotation = getOption("-r", args, int)
 
 outPutStr = cipher(args, 1)
 
-print(outPutStr)
+print(outPutStr.strip('\n'))
 # After all options have been removed, check for fileName
 
 # print(type(rotation), type(outPutFile))

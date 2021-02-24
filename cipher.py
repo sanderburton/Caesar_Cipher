@@ -7,7 +7,7 @@ def cipher(fileList, rotation):
         fobj = open(f)
 
         for line in fobj:
-            line = line.strip()
+            line = line.strip('\n')
             outputStr += cipherLine(line, rotation)
 
         fobj.close()
@@ -26,11 +26,11 @@ def cipherLine(line, rotation):
         if char.isupper():
             # 90 is the max value for an uppercase letter 'Z' , 65 is the min value for an uppercase letter 'A'
             if asciiVal > 90:
-                asciiVal = 65 + asciiVal - 90
+                asciiVal = 64 + asciiVal - 90
         elif char.islower():
             # 122 is the max ascii value for a lowercase letter 'z', 97 is the min ascii value for a lowercase letter 'a'
             if asciiVal > 122:
-                asciiVal = 97 + asciiVal - 122
+                asciiVal = 96 + asciiVal - 122
 
         lineOutput += chr(asciiVal)
     return lineOutput + "\n"
