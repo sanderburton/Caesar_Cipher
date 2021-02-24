@@ -2,7 +2,16 @@ import sys
 
 USAGE = '''
 Usage: 
-caesar.py encrypt|decrypt [OPTIONS...] Files...'''
+caesar.py [OPTIONS...] Files...
+
+===options===
+
+[-s FileName]
+specify a file for the output to be saved to.
+
+[-r rotationAmount]
+specify the amount by which to rotate the characters (forward through the alphabet) as an integer. By
+default the cipher rotates by 10'''
 
 
 def error(msg=""):
@@ -14,11 +23,6 @@ def error(msg=""):
 def validateInput(userInput):
     if len(userInput) < 1:
         error("You must specify at least one file name")
-
-    # operation = userInput[1].lower()
-    # if operation != 'encrypt' and operation != 'decrypt':
-    #     error(f"First argument must be either 'encrypt' or 'decrypt' (Got '{userInput[1]}')")
-    #     sys.exit(1)
 
 
 def getOption(flag, args, dataType, default):

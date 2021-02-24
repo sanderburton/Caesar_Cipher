@@ -13,7 +13,7 @@ def main():
     validateInput(args)
 
     outputStr = cipher(args, rotation)
-    print(outputStr.strip('\n'))
+    print(outputStr, end='')
     # After all options have been removed, check for fileName
 
 main()
