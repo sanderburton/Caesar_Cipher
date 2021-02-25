@@ -13,7 +13,7 @@ Mac users may need to use 'python3' as macs tend to ship with both python 2 and 
 
 `Files...` refers to one or more relative paths to files
 
-#### options
+### options
 ```
 -s FileName
 ```
