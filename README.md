@@ -13,7 +13,7 @@ Mac users may need to use 'python3' as macs tend to ship with both python 2 and 
 
 `Files...` refers to one or more relative paths to files
 
-### options
+### Options
 ```
 -s FileName
 ```
@@ -22,9 +22,9 @@ specify a file for the output to be saved to.
 -r rotationAmount
 ```
 specify the amount by which to rotate the characters (forward through the alphabet) as an integer. By
-default the cipher rotates by 10.
+default the cipher rotates by 10. If a character is rotatedd past 'z', it will wrap to the beginning of the alphabet.
 
-### Examples
+## Examples
 
 If I wanted to decipher the file `rotate_me_by_21.md`, I could run
 ```
