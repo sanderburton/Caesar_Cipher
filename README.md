@@ -25,3 +25,13 @@ specify the amount by which to rotate the characters (forward through the alphab
 default the cipher rotates by 10.
 
 ### Examples
+
+If I wanted to decipher the file `rotate_me_by_21.md`, I could run
+```
+$ python src/caesar.py -r 21 samples/rotate_me_by_21.md
+```
+To save the output into a markdown file:
+```
+$ python src/caesar.py -r 21 samples/rotate_me_by_21.md -s deciphered.md
+```
+As you can see, the order of the optional flags doesn't matter, so long as a flag is followed by a valid argument.
