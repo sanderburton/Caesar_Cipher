@@ -7,11 +7,9 @@ To run the program from the command line, use the following syntax:
 python caesar.py [OPTIONS...] Files... 
 ```
 
-NOTE: if your python interpreter has not been added to your PATH variable, you will get a "command not found" error when using the python command. 
+NOTE: if a python interpreter has not been added to your PATH variable, you will get a "command not found" error when using the python command. 
 
-Mac users may need to use 'python3' as macs tend to ship with both python (python 2) and python 3.
-#### encrypt
-takes any number of files, 
+Mac users may need to use 'python3' as macs tend to ship with both python 2 and python 3.
 
 #### options
 ```

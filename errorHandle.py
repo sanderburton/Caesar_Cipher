@@ -1,8 +1,9 @@
 import sys
 
 USAGE = '''
-Usage: 
-caesar.py [OPTIONS...] Files...
+Use the following syntax:
+
+python caesar.py [OPTIONS...] Files...
 
 ===options===
 
