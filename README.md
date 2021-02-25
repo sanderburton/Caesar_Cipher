@@ -11,6 +11,8 @@ NOTE: if a python interpreter has not been added to your PATH variable, you will
 
 Mac users may need to use 'python3' as macs tend to ship with both python 2 and python 3.
 
+`Files...` refers to one or more relative paths to files
+
 #### options
 ```
 -s FileName
@@ -21,3 +23,5 @@ specify a file for the output to be saved to.
 ```
 specify the amount by which to rotate the characters (forward through the alphabet) as an integer. By
 default the cipher rotates by 10.
+
+### Examples
