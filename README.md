@@ -25,6 +25,10 @@ specify the amount by which to rotate the characters (forward through the alphab
 default the cipher rotates by 10. If a character is rotatedd past 'z', it will wrap to the beginning of the alphabet.
 
 ## Examples
+`msg0.txt` was created by rotating each character by 16 places. To decipher this, the default rotation of 10 will work:
+```
+$ python src/caesar.py samples/msg0.txt
+```
 
 If I wanted to decipher the file `rotate_me_by_21.md`, I could run
 ```
