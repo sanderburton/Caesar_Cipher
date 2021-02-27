@@ -25,8 +25,8 @@ Mac users may need to use 'python3' as macs tend to ship with both python 2 and 
 `Files...` refers to one or more relative paths to files
 
 ### Options
-Options are case-sensitive in case future capital letter options are added.</br>
-By default, the smartCipher option will be used (use -r to overwrite this). </br>
+- Options are case-sensitive in case future capital letter options are added.</br>
+- By default, the smartCipher option will be used (use -r to overwrite this). </br>
 NOTE: when using the smartCipher option, confidence is affected by how many non-letter symbols are found adjacent to words, including punctuation marks.
 ```
 -s
