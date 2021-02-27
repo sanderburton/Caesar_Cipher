@@ -1,24 +1,33 @@
-from errorHandle import validateInput, getOption
+from errorHandle import validateInput
 from cipher import cipher, smartCipher
+from options import parseOptions, getAdditionalInput
 
 import os
 import sys
 import time
 
 def main():
-    startTime = time.perf_counter()
     args = sys.argv[1:]
 
-    outputFile = getOption("-s", args, str, default=sys.stdout)
-    rotation = getOption("-r", args, int, default=10)
-
     validateInput(args)
+    optionsList = parseOptions(args)
 
-    outputStr = smartCipher(args)
-    if type(outputFile) == str:
-        outputFile = open(outputFile, 'w')
-        print(outputStr, end='', file=outputFile)
-        outputFile.close()
+    # outputFile = getOption("-s", args, str, default=sys.stdout)
+    # rotation = getOption("-r", args, int, default=10)
+
+    options = getAdditionalInput(optionsList)
+
+    startTime = time.perf_counter()
+
+    if 'rot' in options:
+        outputStr = cipher(args, options['rot'])
+    else:
+        outputStr = smartCipher(args)
+
+    if 'saveFile' in options:
+        file = open(options['saveFile'], 'w')
+        print(outputStr, end='', file=file)
+        file.close()
     else:
         print(outputStr, end='')
 

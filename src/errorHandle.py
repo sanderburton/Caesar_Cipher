@@ -1,4 +1,5 @@
 import sys
+import os
 
 USAGE = '''
 Use the following syntax:
@@ -7,10 +8,10 @@ python caesar.py [OPTIONS...] Files...
 
 ===options===
 
-[-s FileName]
+[-s]
 specify a file for the output to be saved to.
 
-[-r rotationAmount]
+[-r]
 specify the amount by which to rotate the characters (forward through the alphabet) as an integer. By
 default the cipher rotates by 10'''
 
@@ -26,21 +27,8 @@ def validateInput(userInput):
         error("You must specify at least one file name")
 
 
-def getOption(flag, args, dataType, default):
-    '''
-    Parses the command line arguments for optional flags, and handles incorrect inputs
-    '''
-    if flag in args:
-        i = args.index(flag)
-        if len(args) - 1 == i:
-            error(f"No argument follows '{flag}' flag ")
-        args.pop(i)
-        option = args.pop(i) 
-        if dataType == int:
-            if option.isdigit():
-                return int(option)
-            else:
-                error(f"An integer is required after the {flag} flag (Got '{option}')")
-        return option
-
-    return default
+def isValidFilePath(filePath):
+    if os.access(filePath, os.R_OK):
+        return True
+    else:
+        error(f"{filePath} is not a valid file or you do not have permission to open it")

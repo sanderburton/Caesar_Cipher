@@ -1,4 +1,5 @@
 from readDictionary import createDict
+from errorHandle import isValidFilePath
 import os
 
 def cipher(fileList, rotation):
@@ -10,6 +11,7 @@ def cipher(fileList, rotation):
     return outputStr
 
 def smartCipher(fileList):
+    print("\nSmartCipher is thinking...")
     outputStr = ''
     words = createDict(os.path.dirname(__file__) + "/../resources/words.txt")
     
@@ -33,15 +35,17 @@ def smartCipher(fileList):
         outputStr += f"\n========{f} rotated by {rotations}, confidence: {best:.2f}%========\n{bestText}"
     return outputStr
 
-def cipherFile(fileName, rotation):
-    outputStr = ''
-    fobj = open(fileName)
-    for line in fobj:
-        line = line.strip('\n')
-        outputStr += cipherLine(line, rotation)
 
-    fobj.close()
-    return outputStr
+def cipherFile(fileName, rotation):
+    if isValidFilePath(fileName):
+        outputStr = ''
+        fobj = open(fileName)
+        for line in fobj:
+            line = line.strip('\n')
+            outputStr += cipherLine(line, rotation)
+
+        fobj.close()
+        return outputStr
   
 
 def cipherLine(line, rotation):
@@ -68,3 +72,4 @@ def cipherLine(line, rotation):
         lineOutput += chr(asciiVal)
 
     return lineOutput + "\n"
+
