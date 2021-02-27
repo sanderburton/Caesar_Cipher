@@ -47,12 +47,12 @@ To let the Smart Cipher do the work for you, simply give a path to an encrypted 
 ```
 $ python src/caesar.py samples/msg0.txt
 ```
-Smart Cipher will figure out how many places the each character needs to be rotated in order to produce
+Smart Cipher will figure out how many places each character needs to be rotated in order to produce
 a human readable message (in english).
 
 `msg0.txt` was created by rotating each character by 16 places. To decipher this, a rotation of 10 is needed (16 + 10 = 26). To manually decipher this file I could run:
 ```
-$ python src/caesar.py samples/msg0.txt -r
+$ python src/caesar.py -r samples/msg0.txt
 Enter rotation amount as an integer: 10
 ```
 
@@ -61,11 +61,11 @@ If I wanted to decipher the file `rotate_me_by_21.md` (manually), I could run
 $ python src/caesar.py samples/rotate_me_by_21.md -r
 Enter rotation amount as an integer: 21
 ```
-As you can see, the order of the optional flags doesn't matter. I tried to make the command-line 
+As you can see in these two examples, the order/location of the optional flags doesn't matter. I tried to make the command-line 
 interface as user-proof as possible. If invalid input is entered a helpful error message will be
 displayed.
 
-To save the output into a markdown file:
+To save the output into a text file named `output.txt`:
 ```
 $ python src/caesar.py -rs samples/rotate_me_by_21.md
 Enter rotation amount as an integer: 21
