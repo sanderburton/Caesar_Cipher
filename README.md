@@ -1,9 +1,14 @@
 # Caesar Cipher
-This is a basic cipher that works by shifting letters down the alphabet by a specified number of characters.
+This is a basic cipher that works by rotating each character of a message forward through the alphabet
+by a specified number of rotations. It is called 'Caesar Cipher' because it has been reported that
+Julius Caesar used to encrypt military messages.
+
+I built this from scratch, using python. All work here is my own (though I didn't come up with the
+Caesar cipher idea, I did come up with this implentation). The words.txt file was downloaded from SCOWL (http://app.aspell.net/create).
 
 ## Smart Cipher
 This program is able to take a ciphered message and figure out how many rotations are needed to translate
-that message into english. By default the smart cipher option is enabled.
+that message into English. By default the smart cipher option is enabled.
 
 The Smart Cipher option works by trying each rotation amount and comparing the output to a dictionary
 of words in the english language. It then reports the percentage of words that were present in the dictionary as the 'confidence'.
