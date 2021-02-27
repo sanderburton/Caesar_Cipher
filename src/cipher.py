@@ -1,18 +1,48 @@
-
-
+from readDictionary import createDict
+import os
 
 def cipher(fileList, rotation):
+    
     outputStr = ""
     for f in fileList:
-        fobj = open(f)
-        for line in fobj:
-            line = line.strip('\n')
-            outputStr += cipherLine(line, rotation)
-
-        fobj.close()
+        outputStr += cipherFile(f, rotation)
 
     return outputStr
 
+def smartCipher(fileList):
+    outputStr = ''
+    words = createDict(os.path.dirname(__file__) + "/../resources/words.txt")
+    
+    for f in fileList:
+        best = 0.0
+
+        for i in range(26):
+            cipheredText = cipherFile(f, i)
+            englishWords = 0
+            cipheredWordList = cipheredText.split()
+            for word in cipheredWordList:
+                if word in words:
+                    englishWords += 1
+            confidence = (englishWords / len(cipheredWordList)) * 100
+
+            if confidence > best:
+                best = confidence
+                bestText = cipheredText
+                rotations = i
+
+        outputStr += f"\n========{f} rotated by {rotations}, confidence: {best:.2f}%========\n{bestText}"
+    return outputStr
+
+def cipherFile(fileName, rotation):
+    outputStr = ''
+    fobj = open(fileName)
+    for line in fobj:
+        line = line.strip('\n')
+        outputStr += cipherLine(line, rotation)
+
+    fobj.close()
+    return outputStr
+  
 
 def cipherLine(line, rotation):
     lineOutput = ""
@@ -38,5 +68,3 @@ def cipherLine(line, rotation):
         lineOutput += chr(asciiVal)
 
     return lineOutput + "\n"
-
-

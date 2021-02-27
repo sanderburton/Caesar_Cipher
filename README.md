@@ -24,6 +24,8 @@ specify a file for the output to be saved to.
 specify the amount by which to rotate the characters (forward through the alphabet) as an integer. By
 default the cipher rotates by 10. If a character is rotatedd past 'z', it will wrap to the beginning of the alphabet.
 
+NOTE: when using the smartCipher option, confidence is affected by how many non-letter symbols are found, including punctuation.
+
 ## Examples
 `msg0.txt` was created by rotating each character by 16 places. To decipher this, the default rotation of 10 will work:
 ```
