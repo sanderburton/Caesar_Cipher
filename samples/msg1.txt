@@ -3,4 +3,5 @@ Thanks for checking out my caesar cipher,
 I hope you like it! I had a blast creating it,
 and I plan on adding more features as I have time.
 Unfortunately, being a full time student while 
-working part time doesn't leave me much of that :(.
+working as a computer science TA doesn't leave me 
+much of that :(.

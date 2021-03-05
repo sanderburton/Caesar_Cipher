@@ -9,12 +9,9 @@ import time
 def main():
     args = sys.argv[1:]
 
-    validateInput(args)
+    
     optionsList = parseOptions(args)
-
-    # outputFile = getOption("-s", args, str, default=sys.stdout)
-    # rotation = getOption("-r", args, int, default=10)
-
+    validateInput(args)
     options = getAdditionalInput(optionsList)
 
     startTime = time.perf_counter()
@@ -25,9 +22,14 @@ def main():
         outputStr = smartCipher(args)
 
     if 'saveFile' in options:
-        file = open(options['saveFile'], 'w')
-        print(outputStr, end='', file=file)
-        file.close()
+        try:
+            file = open(options['saveFile'], 'w')
+            print(outputStr, end='', file=file)
+            print(f"Result has been saved to {options['saveFile']}" )
+            file.close()
+        except FileNotFoundError:
+            print("The path specified could not be found, please ensure that any directories in the file path already exist")
+            sys.exit(1)
     else:
         print(outputStr, end='')
 

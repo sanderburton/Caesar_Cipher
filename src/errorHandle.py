@@ -2,7 +2,7 @@ import sys
 import os
 
 USAGE = '''
-Use the following syntax:
+===Usage===
 
 python caesar.py [OPTIONS...] Files...
 
@@ -34,4 +34,5 @@ def isValidFilePath(filePath):
     if os.access(filePath, os.R_OK):
         return True
     else:
-        error(f"{filePath} is not a valid file or you do not have permission to open it")
+        print(f"Error!! {filePath} is not a valid file path or you do not have permission to open it")
+        sys.exit(1)

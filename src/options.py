@@ -20,9 +20,7 @@ def parseOptions(args):
         for opt in options:
             if opt in allOptions:
                 continue
-
             allOptions.append(opt)
-
 
     return allOptions
 
@@ -33,7 +31,9 @@ def  getAdditionalInput(options):
         if opt == 'r':
             userInput['rot'] = getIntegerInput("Enter rotation amount as an integer: ")
         elif opt == 's':
-            userInput['saveFile'] = input("Enter relative path to file save location (including the desired filename): ")
+            userInput['saveFile'] = input("Enter the name of (or path to) the file to create: ")
+        else:
+            error(f"no -{opt} option exists")
 
     return userInput
             
