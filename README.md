@@ -38,10 +38,7 @@ NOTE: when using the smartCipher option, confidence is affected by how many non-
 
 >`-r`
 >
->Specify the amount by which to rotate the characters (forward through the alphabet) as an integer.
->This option will disable the smartCipher, so that you can manually encrypt/decrypt files. You will be 
->prompted to enter a rotation amount as an integer. If a character is rotatedd past 'z', it will wrap to 
->the beginning of the alphabet; consequently, rotations greater than 26 are not very useful.
+>Specify the amount by which to rotate the characters (forward through the alphabet) as an integer. This option will disable the smartCipher, so that you can manually encrypt/decrypt files. You will be prompted to enter a rotation amount as an integer. If a character is rotatedd past 'z', it will wrap to the beginning of the alphabet; consequently, rotations greater than 26 are not very useful.
 
 
 
