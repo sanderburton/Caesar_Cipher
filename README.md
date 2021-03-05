@@ -1,19 +1,16 @@
 # Caesar Cipher
-This is a basic cipher that works by rotating each character of a message forward through the alphabet
-by a specified number of rotations. It is called 'Caesar Cipher' because it has been reported that
-Julius Caesar used to encrypt military messages.
+This is a basic cipher that works by rotating each character of a message forward through the alphabet by a specified number of rotations. It is called 'Caesar Cipher' because it has been reported that Julius Caesar used to encrypt military messages.
 
-I built this from scratch, using python. All work here is my own (though I didn't come up with the
-Caesar cipher idea, I did come up with this implentation). The words.txt file was downloaded from SCOWL (http://app.aspell.net/create).
+I built this from scratch, using python. All work here is my own (though I didn't come up with the Caesar cipher idea, I did come up with this implentation). The words.txt file was downloaded from SCOWL (http://app.aspell.net/create).
 
 ## Try it out!!
 https://repl.it/@SanderBurton/CaesarCipher
-## Smart Cipher
-This program is able to take a ciphered message and figure out how many rotations are needed to translate
-that message into English. By default the smart cipher option is enabled.
 
-The Smart Cipher option works by trying each rotation amount and comparing the output to a dictionary
-of words in the english language. It then reports the percentage of words that were present in the dictionary as the 'confidence'.
+## Smart Cipher
+This program is able to take a ciphered message and figure out how many rotations are needed to translate that message into English. By default the smart cipher option is enabled.
+
+The Smart Cipher option works by trying each rotation amount and comparing the output to a dictionary of words in the english language. It then reports the percentage of words that were present in the dictionary as the 'confidence'.
+
 ## Usage
 To run the program from the command line, use the following syntax:
 ```
@@ -92,8 +89,7 @@ Ooh-ah-ah-eh-ah
 
 Done in 0.2159 seconds!!
 ```
-Smart Cipher will figure out how many places each character needs to be rotated in order to produce
-a human readable message (in english).
+Smart Cipher will figure out how many places each character needs to be rotated in order to produce a human readable message (in english).
 
 `msg0.txt` was created by rotating each character by 16 places. To decipher this, a rotation of 10 is needed (16 + 10 = 26). To manually decipher this file I could run:
 ```
@@ -106,9 +102,7 @@ If I wanted to decipher the file `rotate_me_by_21.md` (manually), I could run
 $ python src/caesar.py samples/rotate_me_by_21.md -r
 Enter rotation amount as an integer: 21
 ```
-As you can see in these two examples, the order/location of the optional flags doesn't matter. I tried to make the command-line 
-interface as user-proof as possible. If invalid input is entered a helpful error message will be
-displayed.
+As you can see in these two examples, the order/location of the optional flags doesn't matter. I tried to make the command-line interface as user-proof as possible. If invalid input is entered a helpful error message will be displayed.
 
 To save the output into a text file named `output.txt`:
 ```
