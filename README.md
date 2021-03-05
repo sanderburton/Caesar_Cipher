@@ -28,7 +28,7 @@ Some sample files have been included in the `samples` directory for use in demon
 
 ### Options
 - Options are case-sensitive in case future capital letter options are added
-- By default, the smartCipher option will be used (use -r to overwrite this)
+- By default, the smartCipher option will be used (use `-r` to overwrite this)
 
 NOTE: when using the smartCipher option, confidence is affected by how many non-letter symbols are found adjacent to words, including punctuation marks.<br>
 
