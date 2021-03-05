@@ -24,18 +24,20 @@ Mac users may need to use 'python3' as macs tend to ship with both python 2 and 
 
 `Files...` refers to one or more relative paths to files
 
+Some sample files have been included in the `samples` directory for use in demonstration. Feel free to run the program with those files as input!
+
 ### Options
 - Options are case-sensitive in case future capital letter options are added
 - By default, the smartCipher option will be used (use -r to overwrite this)
 
-NOTE: when using the smartCipher option, confidence is affected by how many non-letter symbols are found adjacent to words, including punctuation marks.
-```
--s
-```
-Save output to a file. Program will prompt user to enter a path(including the file name).
-```
--r
-```
+NOTE: when using the smartCipher option, confidence is affected by how many non-letter symbols are found adjacent to words, including punctuation marks.<br>
+
+`-s`
+
+Save output to a file. Program will prompt user to enter a path(including the file name).<br>
+
+`-r`
+
 Specify the amount by which to rotate the characters (forward through the alphabet) as an integer.
 This option will disable the smartCipher, so that you can manually encrypt/decrypt files. You will be 
 prompted to enter a rotation amount as an integer. If a character is rotatedd past 'z', it will wrap to 
@@ -46,7 +48,50 @@ the beginning of the alphabet; consequently, rotations greater than 26 are not v
 ## Examples
 To let the Smart Cipher do the work for you, simply give a path to an encrypted file:
 ```
-$ python src/caesar.py samples/msg0.txt
+$ python src/caesar.py samples/lyrics.txt
+
+SmartCipher is thinking...
+
+========samples/lyrics.txt rotated by 20, confidence: 74.83%========
+Somewhere over the rainbow
+Way up high
+And the dreams that you dream of
+Once in a lullaby, oh
+
+Somewhere over the rainbow
+Bluebirds fly
+And the dreams that you dream of
+Dreams really do come true-ooh-ooh
+Someday I'll wish upon a star
+Wake up where the clouds are far behind me
+Where trouble melts like lemon drops
+High above the chimney tops that's where
+You'll find me, oh
+
+Somewhere over the rainbow
+Bluebirds fly
+And the dream that you dare to
+Oh why, oh why can't I?
+
+Someday I'll wish upon a star
+Wake up where the clouds are far behind me
+Where trouble melts like lemon drops
+High above the chimney top that's where you'll find me
+Oh, somewhere over the rainbow way up high
+And the dream that you dare to
+Why, oh why can't I?
+
+Ooh-ooh-ooh
+Ooh-ooh-ooh-ooh
+Ooh-ooh
+Ooh-ooh-ooh-ooh
+Ooh-ah-ah-eh-ah
+
+
+    Over The Rainbow
+    - Israel Kamakawiwo'ole version
+
+Done in 0.2159 seconds!!
 ```
 Smart Cipher will figure out how many places each character needs to be rotated in order to produce
 a human readable message (in english).
@@ -70,7 +115,7 @@ To save the output into a text file named `output.txt`:
 ```
 $ python src/caesar.py -rs samples/rotate_me_by_21.md
 Enter rotation amount as an integer: 21
-Enter the name of (or path to) the file to create: : output.txt
+Enter the name of (or path to) the file to create: output.txt
 
 ```
 
