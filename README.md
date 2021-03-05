@@ -32,16 +32,16 @@ Some sample files have been included in the `samples` directory for use in demon
 
 NOTE: when using the smartCipher option, confidence is affected by how many non-letter symbols are found adjacent to words, including punctuation marks.<br>
 
-`-s`
+>`-s`
+>
+>Save output to a file. Program will prompt user to enter a path(including the file name).<br>
 
-Save output to a file. Program will prompt user to enter a path(including the file name).<br>
-
-`-r`
-
-Specify the amount by which to rotate the characters (forward through the alphabet) as an integer.
-This option will disable the smartCipher, so that you can manually encrypt/decrypt files. You will be 
-prompted to enter a rotation amount as an integer. If a character is rotatedd past 'z', it will wrap to 
-the beginning of the alphabet; consequently, rotations greater than 26 are not very useful.
+>`-r`
+>
+>Specify the amount by which to rotate the characters (forward through the alphabet) as an integer.
+>This option will disable the smartCipher, so that you can manually encrypt/decrypt files. You will be 
+>prompted to enter a rotation amount as an integer. If a character is rotatedd past 'z', it will wrap to 
+>the beginning of the alphabet; consequently, rotations greater than 26 are not very useful.
 
 
 
