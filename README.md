@@ -6,6 +6,8 @@ Julius Caesar used to encrypt military messages.
 I built this from scratch, using python. All work here is my own (though I didn't come up with the
 Caesar cipher idea, I did come up with this implentation). The words.txt file was downloaded from SCOWL (http://app.aspell.net/create).
 
+## Try it out!!
+https://repl.it/@SanderBurton/CaesarCipher
 ## Smart Cipher
 This program is able to take a ciphered message and figure out how many rotations are needed to translate
 that message into English. By default the smart cipher option is enabled.
