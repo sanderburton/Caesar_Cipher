@@ -70,7 +70,7 @@ To save the output into a text file named `output.txt`:
 ```
 $ python src/caesar.py -rs samples/rotate_me_by_21.md
 Enter rotation amount as an integer: 21
-Enter relative path to file save location (including the desired filename): output.txt
+Enter the name of (or path to) the file to create: : output.txt
 
 ```
 
