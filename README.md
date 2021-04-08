@@ -1,7 +1,7 @@
 # Caesar Cipher
 This is a basic cipher that works by rotating each character of a message forward through the alphabet by a specified number of rotations. It is called 'Caesar Cipher' because it has been reported that Julius Caesar used to encrypt military messages.
 
-I built this from scratch, using python. All work here is my own (though I didn't come up with the Caesar cipher idea, I did come up with this implentation). The words.txt file was downloaded from SCOWL (http://app.aspell.net/create).
+I built this from scratch, using python. All work here is my own (though I did not come up with the Caesar cipher idea, I did come up with this implentation. I originally learned about the Caesar Cipher and Smart Caesar Cipher ideas from professor Erik Falor at Utah State University). The words.txt file was downloaded from SCOWL (http://app.aspell.net/create).
 
 ## Try it out!!
 https://repl.it/@SanderBurton/CaesarCipher
